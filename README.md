@@ -1,1 +1,1 @@
-Exemplo Node.js + WebAudio + Socket.io 
+Simple Node.js Chat with Socket.io
