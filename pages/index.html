@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"/>
+	
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="socket.io/socket.io.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<html lang="en">	
+    <body>
+	    <header class="headerPrincipal">
+	    	<h1 class="eightLogo" title="Chat do Vovô"></h1>
+				<nav class="opcoes">
+					<ul>			   
+					   <li><a href="#">#voZauM</a></li>
+					</ul>	
+		    	</nav>		
+		</header>
+		
+		<section class="sectionPrincipal">
+			<section class="sectionChat">
+				<section class="peopleListChat">
+					<ul></ul>
+				</section>
+				<section class="chatBody">
+					<ul></ul>
+				</section>
+				<section class="chatMessage">
+					<input class="textNick" readonly="readonly" type="text" maxlength="15" placeholder="Nick?"/>
+					<input class="textMessage" type="text" maxlength="400" placeholder="Type your message here..."/>
+					<input class="submitMsg" type="submit" value="SEND"/>
+				</section>
+			</section>
+			
+			<!-- section class="sectionCanvas">
+				<canvas id="canvas" class="canvas"></canvas>
+			</section>  -->
+			
+		</section>
+		
+		<footer class="footerPrincipal">
+			<nav class="opcoes">
+				<ul>	
+					<li>© 2013 Marcelo Chaves</li>		   
+				</ul>	
+	    	</nav>		
+		</footer>
+		
+    </body>	
+</html>

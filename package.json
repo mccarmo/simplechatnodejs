@@ -1,0 +1,13 @@
+{
+  "name": "node-web-audio-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.3.x",
+    "socket.io" : "0.9.16",
+    "redis" : "0.8.x"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
