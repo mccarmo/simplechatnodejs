@@ -3,7 +3,6 @@ $(document).ready(function(){
     var server = io.connect();
     
     server.on('connect', function(data) {
-    	//$('#status').html('Connected to 8 bits life chat...');
     	nickname = prompt("What is your nickname?");
     	
     	if(typeof nickname == 'undefined' || nickname.length <= 0) {
@@ -24,7 +23,18 @@ $(document).ready(function(){
     });
 	
     server.on("join",function(data){
-    	insertNick(data);
+    	if(data!=null) {
+    		insertNick(data);
+        	$('.chatBody ul').append("<li class='msgBalloon msgBalloonInOut'><span class='nickMsg'>"+data+"</span> entrou na conversa...</li>");
+    	}	
+    });
+    
+    server.on("disconnect",function(data) {
+    	if(data) {
+    		$('.chatBody ul').append("<li class='msgBalloon msgBalloonInOut'><span class='nickMsg'>"+data+"</span> saiu da conversa...</li>");
+        	$('.chatBody').scrollTop($('.chatBody')[0].scrollHeight); 
+        	removeNick(data);
+    	}	
     });
     
     $('.submitMsg').on("click",function() {
@@ -36,6 +46,11 @@ $(document).ready(function(){
     		sendMessage();
         }
     })
+    
+    var removeNick = function (who) {
+    	$("li[data-nick='"+who+"']").empty();
+    	$("li[data-nick='"+who+"']").remove();
+    } 
     
     var insertMessage = function(who,msg) {
     	$('.chatBody ul').append("<li class='msgBalloon'><span class='nickMsg'>"+who+"</span>: "+msg+"</li>");
@@ -53,7 +68,7 @@ $(document).ready(function(){
     }
     
     var insertNick = function(nick) {
-    	$('.peopleListChat ul').append("<li>"+nick+"</li>");
+    	$('.peopleListChat ul').append("<li data-nick='"+nick+"'>"+nick+"</li>");
     }
    
 });

@@ -13,8 +13,8 @@ var count_conn = 0;
 
 var storeMessage = function(name,data) {
 	var message = name + ": " + data;
-	messages.push(message);
-	console.log(messages);
+	messages.push(message)
+	console.log(messages)
 }
 
 app.get('/', function (request, response) {
@@ -41,7 +41,7 @@ app.get('/js/jquery-1.10.2.min.js', function (request, response) {
     fs.createReadStream('./public/js/jquery-1.10.2.min.js').pipe(response)
 })
 
-var io = socketio.listen(server);
+var io = socketio.listen(server)
 
 io.sockets.on('connection', function (socket) {
 	count_conn++
@@ -53,31 +53,39 @@ io.sockets.on('connection', function (socket) {
 			nick = nick + count_conn;
 		}
 		
-		clients.push(nick);
-		socket.set('nickname', nick);
+		clients.push(nick)
+		socket.set('nickname', nick)
 		
 		socket.broadcast.emit("join",nick)
 		
 		clients.forEach(function(client) {
-			if(client.split(':')[0]!=nick) {
-				socket.emit("join", client);
+			if(client!=nick) {
+				socket.emit("join", client)
 			}
-		});
+		})
 		
 		messages.forEach(function(message) {
-				socket.emit("chat", message);
-		});
+			socket.emit("chat", message)
+		})
 		
 	})
 	
 	socket.on("disconnect",function(data){
-		console.log("Saiu..."+ data)
-		clients.pop(data)
+		socket.get('nickname', function(err, name) {
+			var clientsAux = [];
+			clients.forEach(function (client) {
+				if(client!=name) {
+					clientsAux.push(client)
+				}
+			}) 
+			clients = clientsAux
+			socket.broadcast.emit("disconnect",name)
+		})
 	})
 	
 	socket.on("message",function(message) {
 		socket.get('nickname', function(err, name) {
-			storeMessage(name,message);
+			storeMessage(name,message)
 			socket.broadcast.emit("chat", name + ": " + message)
 			console.log("new message from "+name+": "+message)
 		})
