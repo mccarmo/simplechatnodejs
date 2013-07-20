@@ -40,6 +40,10 @@ body {
 .headerPrincipal .opcoes {
 	margin-bottom: 10px;
 	padding-top: 10px;
+	background-image: url("../img/gramado.jpg");
+	background-repeat:no-repeat;
+	background-position: top;
+	background-size: 100% 100%;
 }
 
 .headerPrincipal .opcoes:hover {
@@ -61,10 +65,6 @@ body {
 .footerPrincipal .opcoes {
 	margin-top: 10px;
 	padding-top: 12px;
-	background-image: url("../img/gramado.jpg");
-	background-repeat:no-repeat;
-	background-position: top;
-	background-size: 100% 100%;
 }
 
 .headerPrincipal .opcoes  ul li {
