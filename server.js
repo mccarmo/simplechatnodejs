@@ -14,6 +14,9 @@ var count_conn = 0;
 var storeMessage = function(name,data) {
 	var message = name + ": " + data;
 	messages.push(message)
+	if(messages.length > 10) {
+		messages.shift();
+	}
 	console.log(messages)
 }
 
