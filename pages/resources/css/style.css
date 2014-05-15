@@ -1,0 +1,265 @@
+body {
+	background: #fff;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.headerPrincipal .eightLogo {
+	background-image: url("../img/ceara.jpg");
+	background-repeat:no-repeat;
+	background-position: top;
+	background-size: 100% 100%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	text-align: center; 
+	color: #ccc;
+	font-size: 40px; 
+	border: 4px #ccc solid;
+	text-shadow: 3px 1px 1px #000;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	-webkit-box-shadow: 2px 1px 15px #000;
+	-moz-box-shadow: 2px 1px 15px #000;
+	box-shadow: 2px 1px 15px #000;
+	top: -26px;	
+	position: absolute;
+}
+
+.headerPrincipal .eightLogo:hover{
+	-webkit-transform: rotate3d(0, 1, 1, 360deg); 
+	-moz-transform: rotate3d(0, 1, 1, 360deg); .
+	transform: rotate3d(0, 1, 1, 360deg);
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+
+.headerPrincipal .opcoes {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	background-image: url("../img/gramado.jpg");
+	background-repeat:no-repeat;
+	background-position: top;
+	background-size: 100% 100%;
+}
+
+.headerPrincipal .opcoes:hover {
+	-webkit-box-shadow: 2px 1px 15px #000;
+	-moz-box-shadow: 2px 1px 15px #000;
+	box-shadow: 2px 1px 15px #000;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+	-o-transition: all .8s ease-in-out;
+	transition: all .8s ease-in-out;
+}
+
+.headerPrincipal ul li a{
+	font-size: 60px;
+	top: -15px;
+	position: absolute;
+}
+
+.footerPrincipal .opcoes {
+	margin-top: 10px;
+	padding-top: 12px;
+}
+
+.headerPrincipal .opcoes  ul li {
+	display: inline;
+	padding-left: 43px;
+}
+
+.headerPrincipal .opcoes li a {
+	text-decoration:none;
+	padding: 5px 11px;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.opcoes {
+	width: 100%;
+	height: 28px;
+	background-color: #737373;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+	font: bold 11px Verdana, sans-serif;
+	letter-spacing: 1px;
+	float: right;	
+	padding-bottom: 20px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.footerPrincipal .opcoes  ul li {
+	display: inline;
+	color: #FFFFFF;
+}
+
+.sectionCanvas {
+	float: left;
+	text-align: left;	
+	border: 1px #ccc dashed;
+}
+.sectionCanvas, .canvas {
+	width: 500px;
+	height: 500px;	
+	margin-left: 5px;
+}
+
+.sectionCanvas, .peopleListChat, .chatBody {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+}
+
+.sectionChat {	
+	float: left;
+	width: 500px;
+	height: 500px;
+}
+
+.peopleListChat {
+	float: left;
+	width: 145px;
+	height: 450px;
+	margin-right: 5px;
+	text-align: left;
+	background-color: #ccc;
+	-webkit-box-shadow: inset 3px 3px 3px #aaa;
+	-moz-box-shadow: inset 3px 3px 3px #aaa;
+	box-shadow: inset 3px 3px 3px #aaa;
+}	
+
+.chatBody {
+	float: left;
+	width: 350px;
+	height: 450px;
+	background-color: #eee;
+	-webkit-box-shadow: inset 3px 3px 3px #ccc;
+	-moz-box-shadow: inset 3px 3px 3px #ccc;
+	box-shadow: inset 3px 3px 3px #ccc;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.chatMessage {
+	float: right;
+	width: 500px;
+	height: 50px;
+	padding-top: 5px;
+	background-color: #fff;
+}
+
+.msgBalloon:hover {
+	-webkit-box-shadow: 2px 1px 15px rgba(0,255,0,1);
+	-moz-box-shadow: 2px 1px 15px rgba(0,255,0,1);
+	box-shadow: 2px 1px 15px rgba(0,255,0,1);
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.textNick, .textMessage {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+	height: 38px;
+	float: left;
+	border: 1px #ccc solid;
+	-webkit-box-shadow: inset 3px 3px 3px #ccc;
+	-moz-box-shadow: inset 3px 3px 3px #ccc;
+	box-shadow: inset 3px 3px 3px #ccc;
+}
+
+.peopleListChat ul li {
+	color: #000;
+	font: bold;
+	width: 100%;
+	font-size: 11px;
+    margin-bottom: 10px;
+    margin-left: -30px;
+}
+
+.chatBody ul, .peopleListChat ul {
+	list-style-type: none;
+}
+
+.nickMsg {
+	font-weight: bold;
+}
+
+.msgBalloon {
+	width: 100%;
+	background-color: #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+	-webkit-box-shadow: 0px 1px 2px #000;
+	-moz-box-shadow: 0px 1px 2px #000;
+	box-shadow: 0px 1px 2px #000;
+	font: normal 10px Verdana, sans-serif;
+	letter-spacing: 1px;
+	float: right;	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+	text-decoration:none;
+	overflow: hidden;
+	white-space: pre-wrap;
+}
+
+.msgBalloonInOut {
+	color: #000!important;
+	background-color: #fff!important;
+}
+
+.chatBody ul li.msgBalloon:nth-child(2n+1) {
+	
+	margin-right: 10px;
+}
+.chatBody ul li.msgBalloon:nth-child(2n) {
+	color: #fff;
+	background-color: #000;
+	margin-left: 20px;
+	margin-right: 15px;
+}
+
+.textNick {
+	width: 133px;
+	margin-right: 5px;
+	padding-left: 10px;
+}
+
+.textMessage {
+	width: 255px;	
+	padding-left: 10px;
+}
+
+.submitMsg {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 80px;
+	height: 38px;
+	background-color: #737373;
+	box-shadow: 0px 1px 2px #000;
+	float: right;
+}
+
+.submitMsg:hover {
+	color: #ffa800;
+}
