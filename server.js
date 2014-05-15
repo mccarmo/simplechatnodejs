@@ -9,6 +9,8 @@ var messages = [];
 var app = express(),
     server = http.createServer(app);
 
+app.use(express.static(__dirname + '/pages'));
+	
 var count_conn = 0;
 
 var storeMessage = function(name,data) {
@@ -19,30 +21,6 @@ var storeMessage = function(name,data) {
 	}
 	console.log(messages)
 }
-
-app.get('/', function (request, response) {
-    fs.createReadStream('./pages/index.html').pipe(response)
-})
-
-app.get('/css/style.css', function (request, response) {
-    fs.createReadStream('./public/css/style.css').pipe(response)
-})
-
-app.get('/img/ceara.jpg', function (request, response) {
-    fs.createReadStream('./public/img/ceara.jpg').pipe(response)
-})
-
-app.get('/img/gramado.jpg', function (request, response) {
-    fs.createReadStream('./public/img/gramado.jpg').pipe(response)
-})
-
-app.get('/js/main.js', function (request, response) {
-    fs.createReadStream('./public/js/main.js').pipe(response)
-})
-
-app.get('/js/jquery-1.10.2.min.js', function (request, response) {
-    fs.createReadStream('./public/js/jquery-1.10.2.min.js').pipe(response)
-})
 
 var io = socketio.listen(server)
 
